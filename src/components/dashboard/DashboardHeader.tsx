@@ -1,7 +1,7 @@
 import React from "react";
 
 const DashboardHeader = () => (
-  <div className="flex flex-col gap-[14px] text-start mb-6">
+  <div className="flex flex-col gap-[14px] text-start my-[32px] ">
     <h2 className="font-bold text-[32px] leading-[125%] text-[#0d141c]  ">
       Dashboard
     </h2>

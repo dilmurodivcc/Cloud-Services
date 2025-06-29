@@ -14,7 +14,7 @@ const InfrastructureHealthTable = () => (
     <div className="border border-[#cfdbe8] rounded-[8px] ">
     <table className="w-full text-sm">
       <thead>
-        <tr className="text-gray-500">
+        <tr className="text-[#0d141c] ">
           <th className="text-left py-[12px] px-[16px]">Node/VM</th>
           <th className="text-left py-[12px] px-[16px]">Status</th>
           <th className="text-left py-[12px] px-[16px]">CPU</th>
@@ -22,18 +22,18 @@ const InfrastructureHealthTable = () => (
           <th className="text-left py-[12px] px-[16px]">Disk</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody className="">
         {nodes.map((n, i) => (
           <tr key={i} className="border-t border-[#cfdbe8]">
             <td className="py-[24px] px-[16px]">{n.name}</td>
-            <td className="py-[24px] px-[16px]">
-              <button className="rounded-[8px] px-[16px] min-w-[84px] max-w-[480px] bg-[#e8edf5]">
+            <td className="py-[24px] px-[16px] w-[158px]">
+              <button className="rounded-[8px] py-[6px] px-[42px] min-w-[84px] max-w-[480px] bg-[#e8edf5]">
                 {n.status}
               </button>
             </td>
-            <td className="py-[24px] px-[16px]">{n.cpu}</td>
-            <td className="py-[24px] px-[16px]">{n.ram}</td>
-            <td className="py-[24px] px-[16px]">{n.disk}</td>
+            <td className="py-[24px] px-[16px] text-[#4a739c]">{n.cpu}</td>
+            <td className="py-[24px] px-[16px] text-[#4a739c]">{n.ram}</td>
+            <td className="py-[24px] px-[16px] text-[#4a739c]">{n.disk}</td>
           </tr>
         ))}
         </tbody>

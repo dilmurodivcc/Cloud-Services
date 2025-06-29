@@ -9,8 +9,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     <>
       {Component.name !== "services"  && <Header />}
       <Component {...pageProps} />
-      {Component.name !== "services" && Component.name !== "Home" && <Sidebar />}
-      
+      {Component.name !== "services" && Component.name !== "Home" && Component.name !== "Settings" && <Sidebar />}
     </>
   );
 }

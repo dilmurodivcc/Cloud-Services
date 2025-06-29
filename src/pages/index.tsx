@@ -9,7 +9,7 @@ import TicketsSummary from "@/components/dashboard/TicketsSummary";
 
 export default function Home() {
   return (
-    <div className="container py-8">
+    <div className="container mt-[120px] px-8">
       <DashboardHeader />
       <SystemHealthCards />
       <SystemStatsCards />

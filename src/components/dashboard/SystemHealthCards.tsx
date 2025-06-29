@@ -36,7 +36,7 @@ const SystemHealthCards = () => (
       {healthData.map((item, idx) => (
         <div
           key={idx}
-          className="border border-[#cfdbe8] rounded-[8px] p-[24px]  w-[180px] h-[178px] min-w-[158px]
+          className="border border-[#cfdbe8] rounded-[8px] p-[24px]  w-[172px] h-[178px] min-w-[158px]
  flex flex-col items-start gap-[10px]"
         >
           <span

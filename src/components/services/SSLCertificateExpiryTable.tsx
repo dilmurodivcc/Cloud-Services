@@ -35,10 +35,10 @@ const SSLCertificateExpiryTable = () => (
         <thead>
           <tr className="text-left  text-gray-500">
             <th className="p-3">Service</th>
-            <th className="p-3">Domain</th>
-            <th className="p-3">Expiry Date</th>
-            <th className="p-3">Days Remaining</th>
-            <th className="p-3">Status</th>
+            <th className="py-3">Domain</th>
+            <th className="py-3">Expiry Date</th>
+            <th className="py-3">Days Remaining</th>
+            <th className="py-3">Status</th>
           </tr>
         </thead>
         <tbody>
@@ -55,7 +55,7 @@ const SSLCertificateExpiryTable = () => (
                 {c.service}
               </td>
               <td
-                className=" text-[#4a739c]
+                className=" w-[200px] text-[#4a739c]
 "
               >
                 {c.domain}
@@ -72,7 +72,7 @@ const SSLCertificateExpiryTable = () => (
               >
                 {c.days}
               </td>
-              <td className="p-3">
+              <td className="">
                 <button
                   className="rounded-[8px] px-4 py-0 w-[149px] h-[32px] min-w-[84px] max-w-[480px] bg-[#e8edf5]
 
