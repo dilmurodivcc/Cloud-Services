@@ -1,13 +1,23 @@
 import React, { useState } from "react";
 import SettingsTabs from "../components/settings/SettingsTabs";
-import RolesSection from "../components/settings/RolesSection"; 
+import RolesSection from "../components/settings/RolesSection";
 import ClientScopeSection from "../components/settings/ClientScopeSection";
 import ApiKeysSection from "../components/settings/ApiKeysSection";
 import PreferencesSection from "../components/settings/PreferencesSection";
 
 const tabs = ["Roles", "Client Scope", "API Keys", "Preferences"];
 
-const roles = [
+interface Role {
+  name: string;
+  permissions: string;
+}
+
+interface ApiKey {
+  name: string;
+  status: "Active" | "Inactive";
+}
+
+const roles: Role[] = [
   {
     name: "Administrator",
     permissions: "Full access to all features and data",
@@ -22,9 +32,9 @@ const roles = [
   },
 ];
 
-const apiKeys = [
-  { name: "Key 1", status: "Active" as const },
-  { name: "Key 2", status: "Inactive" as const },
+const apiKeys: ApiKey[] = [
+  { name: "Key 1", status: "Active" },
+  { name: "Key 2", status: "Inactive" },
 ];
 
 const Settings = () => {
@@ -37,7 +47,7 @@ const Settings = () => {
     console.log("Create new role clicked");
   };
 
-  const handleEditRole = (role: any) => {
+  const handleEditRole = (role: Role) => {
     console.log("Edit role:", role);
   };
 
@@ -45,11 +55,11 @@ const Settings = () => {
     console.log("Generate new key clicked");
   };
 
-  const handleRevokeKey = (key: any) => {
+  const handleRevokeKey = (key: ApiKey) => {
     console.log("Revoke key:", key);
   };
 
-  const handleActivateKey = (key: any) => {
+  const handleActivateKey = (key: ApiKey) => {
     console.log("Activate key:", key);
   };
 

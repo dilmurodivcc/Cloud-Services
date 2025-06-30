@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 const menu = [
   { name: "Overview", icon: "/icon/favicon.svg", href: "/" },
@@ -25,12 +26,10 @@ const Sidebar = () => {
             <Link key={item.name} href={item.href} legacyBehavior>
               <a
                 className={`flex items-center gap-3 px-3 py-2 rounded-[20px] transition-colors font-medium text-[15px] leading-[150%] hover:bg-[#f5f8fa] ${
-                  isActive
-                    ? "bg-[#e8edf5]  font-bold"
-                    : "text-[#0d141c]"
+                  isActive ? "bg-[#e8edf5]  font-bold" : "text-[#0d141c]"
                 }`}
               >
-                <img src={item.icon} alt="" className="w-5 h-5" />
+                <Image src={item.icon} alt="" width={20} height={20} />
                 {item.name}
               </a>
             </Link>

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const dashboards = [
   { icon: "/icon/healthcheck1.svg", name: "Service A" },
   { icon: "/icon/healthcheck2.svg", name: "Database B" },
@@ -16,17 +18,23 @@ const HealthCheckDashboards = () => (
           key={i}
           className="border border-[#cfdbe8] rounded-[8px] p-[16px] w-[176px]  flex flex-col  items-start    "
         >
-          <img
-           className=" mb-[12px]"
-           src={d.icon}
-           alt={d.name}
-           />
-          <span className="font-bold text-[16px] leading-[125%] text-[#0d141c]
-">
+          <Image
+            className=" mb-[12px]"
+            src={d.icon}
+            alt={d.name}
+            width={32}
+            height={32}
+          />
+          <span
+            className="font-bold text-[16px] leading-[125%] text-[#0d141c]
+"
+          >
             {d.name}
           </span>
-          <span className="font-normal text-[14px] leading-[150%] text-[#4a739c]
-">
+          <span
+            className="font-normal text-[14px] leading-[150%] text-[#4a739c]
+"
+          >
             View dashboard
           </span>
         </div>
