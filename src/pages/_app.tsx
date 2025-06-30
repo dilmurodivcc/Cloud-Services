@@ -1,14 +1,14 @@
 import type { AppProps } from "next/app";
 import Header from "@/components/layout/Header";
 import Sidebar from "@/components/layout/Sidebar";
+import { useRouter } from "next/router";
 import "../styles/globals.css";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
-  console.log("MyApp rendered with component:", Component.name);
-  const isSimpleLayout =
-    Component.name === "Services" ||
-    Component.name === "Home" ||
-    Component.name === "Settings";
+  const router = useRouter();
+
+  const simpleLayoutRoutes = ["/", "/services", "/settings"];
+  const isSimpleLayout = simpleLayoutRoutes.includes(router.pathname);
 
   return isSimpleLayout ? (
     <>
