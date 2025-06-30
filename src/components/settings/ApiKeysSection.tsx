@@ -22,8 +22,8 @@ const ApiKeysSection: React.FC<ApiKeysSectionProps> = ({
     <section className="mb-10">
       <h2 className="text-[22px] font-semibold mb-2">API Keys</h2>
       <p className=" my-[22px]">
-        Manage API keys for accessing the system's API. Generate new keys or
-        revoke existing ones.
+        Manage API keys for accessing the system&apos;s API. Generate new keys
+        or revoke existing ones.
       </p>
       <div className="bg-white border border-[#e5e8eb] rounded-lg overflow-hidden mb-4">
         <table className="min-w-full text-sm">
@@ -45,9 +45,7 @@ const ApiKeysSection: React.FC<ApiKeysSectionProps> = ({
               <tr key={key.name} className="border-t border-[#e5e8eb]">
                 <td className="px-[16px] py-[25px] w-[45%]">{key.name}</td>
                 <td className="px-[16px] py-[25px] w-[27%]">
-                  <button
-                    className="rounded-[8px] px-4 py-0 w-[221px] h-[32px] min-w-[84px] max-w-[480px] bg-[#e8edf5]"
-                  >
+                  <button className="rounded-[8px] px-4 py-0 w-[221px] h-[32px] min-w-[84px] max-w-[480px] bg-[#e8edf5]">
                     {key.status}
                   </button>
                 </td>

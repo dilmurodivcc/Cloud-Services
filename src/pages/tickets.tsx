@@ -95,20 +95,6 @@ const tickets = [
   },
 ];
 
-const statusColor = (status: string) => {
-  if (status === "Open") return "bg-[#e8edf5] text-[#0d141c]";
-  if (status === "In Progress") return "bg-[#e8edf5] text-[#0d80f2]";
-  if (status === "Closed") return "bg-[#e8edf5] text-[#4a739c]";
-  return "bg-[#e8edf5]";
-};
-
-const priorityColor = (priority: string) => {
-  if (priority === "High") return "bg-[#e8edf5] text-[#0d141c]";
-  if (priority === "Medium") return "bg-[#e8edf5] text-[#0d80f2]";
-  if (priority === "Low") return "bg-[#e8edf5] text-[#4a739c]";
-  return "bg-[#e8edf5]";
-};
-
 const Tickets = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [search, setSearch] = useState("");
@@ -136,7 +122,7 @@ const Tickets = () => {
       <div className="bg-[#e8edf5] text-[#4a739c]  rounded-lg flex items-center px-4 py-3    mb-6 w-full ">
         <svg
           className="w-5 h-5 text-[#4a739c] mr-2"
-          fill="none"      
+          fill="none"
           stroke="currentColor"
           strokeWidth="2"
           viewBox="0 0 24 24"
@@ -193,9 +179,7 @@ const Tickets = () => {
                   </button>
                 </td>
                 <td className="px-6 py-4">
-                  <button
-                    className="bg-[#e8edf5]  rounded-[16px] px-4 py-0 w-[116px] h-[32px] min-w-[84px] max-w-[480px]"
-                  >
+                  <button className="bg-[#e8edf5]  rounded-[16px] px-4 py-0 w-[116px] h-[32px] min-w-[84px] max-w-[480px]">
                     {t.priority}
                   </button>
                 </td>

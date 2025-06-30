@@ -22,11 +22,6 @@ const certs = [
   },
 ];
 
-const statusColor = (status: string) =>
-  status === "Valid"
-    ? "bg-green-100 text-green-700"
-    : "bg-yellow-100 text-yellow-700";
-
 const SSLCertificateExpiryTable = () => (
   <div className="mb-8">
     <h3 className="font-semibold text-lg mb-3">SSL Certificate Expiry</h3>
@@ -75,7 +70,6 @@ const SSLCertificateExpiryTable = () => (
               <td className="">
                 <button
                   className="rounded-[8px] px-4 py-0 w-[149px] h-[32px] min-w-[84px] max-w-[480px] bg-[#e8edf5]
-
 "
                 >
                   {c.status}
