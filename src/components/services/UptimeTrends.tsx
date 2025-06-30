@@ -30,7 +30,7 @@ const dataB = [
 ];
 
 const UptimeTrends = () => (
-  <div>
+  <div className="mb-[32px]">
     <h3 className="font-semibold text-lg my-[32px]">
       Third-Party Service Uptime Trends
     </h3>

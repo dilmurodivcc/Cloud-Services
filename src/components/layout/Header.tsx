@@ -14,7 +14,7 @@ const Header = () => {
         <nav className="flex items-center gap-[36px]">
           <Link href={"/"}>Dashboard</Link>
           <Link href={"/services"}>Services</Link>
-          <Link href={"/alerts"}>Alerts</Link>
+          <Link href={"/servicesover"}>Alerts</Link>
           <Link href={"/tickets"}>Tickets</Link>
           <Link href={"/settings"}>Documentation</Link>
           <button className="flex items-center justify-center rounded-[10px] bg-[#e8edf5] w-[40px] h-[40px]">

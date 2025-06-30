@@ -1,15 +1,25 @@
 import type { AppProps } from "next/app";
 import Header from "@/components/layout/Header";
 import Sidebar from "@/components/layout/Sidebar";
-// import { useRouter } from "next/router";
 import "../styles/globals.css";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
-  return (
+  const isSimpleLayout =
+    Component.name === "Services" ||
+    Component.name === "Home" ||
+    Component.name === "Settings";
+
+  return isSimpleLayout ? (
     <>
-      {Component.name !== "services"  && <Header />}
+      <Header />
       <Component {...pageProps} />
-      {Component.name !== "services" && Component.name !== "Home" && Component.name !== "Settings" && <Sidebar />}
     </>
+  ) : (
+    <main className="SideBarLayout">
+      <Sidebar />
+      <div className="content">
+        <Component {...pageProps} />
+      </div>
+    </main>
   );
 }
